@@ -1,0 +1,15 @@
+{
+  "name": "test-work-roonix",
+  "version": "0.0.1",
+  "author": "Alexey <algost96@mail.ru> Gostev",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "express": "~4.15.2",
+    "morgan": "~1.8.1",
+    "nconf": "^0.10.0"
+  }
+}
