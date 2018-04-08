@@ -3,8 +3,8 @@ const Worker = require('./../../models/worker');
 module.exports = async (fields) => {
   try {
     let workerFields = {
-      firstName: fields.firstName,
-      lastName: fields.lastName,
+      first_name: fields.firstName,
+      last_name: fields.lastName,
       patronymic: fields.patronymic,
       sex: fields.sex,
       pay: fields.pay
