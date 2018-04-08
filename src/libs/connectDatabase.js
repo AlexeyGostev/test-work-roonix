@@ -1,16 +1,15 @@
 const config = require('../config');
-const knex = require('knex')({
-  client: 'pg',
-  connection: {
-    host     : config.get('db:host'),
-    port     : config.get('db:port'),
-    user     : config.get('db:user'),
-    password : config.get('db:password'),
-    database : config.get('db:database'),
-    charset  : 'utf8'
-  }
+const Client = require('pg').Client;
+
+const client = new Client({
+  host     : config.get('db:host'),
+  port     : config.get('db:port'),
+  user     : config.get('db:user'),
+  password : config.get('db:password'),
+  database : config.get('db:database'),
+  charset  : 'utf8'
 });
-const bookshelf = require('bookshelf')(knex);
 
+client.connect();
 
-module.exports = bookshelf;
+module.exports = client;

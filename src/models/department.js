@@ -1,4 +1,4 @@
-const bookshelf = require('../libs/connectDatabase');
+const bookshelf = require('../libs/connectDatabase_').bookshelf;
 
 const Department = bookshelf.Model.extend({
   tableName: 'departments',
