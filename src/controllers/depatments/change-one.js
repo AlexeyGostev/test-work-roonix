@@ -6,7 +6,7 @@ module.exports = async (req, res, next) => {
   try {
     let rj = new ResponseJson();
     let departmentFields = req.body;
-    let departmentId = req.body.id;
+    let departmentId = req.params.departmentId;
 
     // Валидация
 
