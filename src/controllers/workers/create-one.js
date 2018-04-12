@@ -17,7 +17,7 @@ module.exports = async (req, res, next) => {
       await workerRepository.insertOneDepartment(newWorker.id, workerDepartments[i]);
     }
 
-    rj.setDescription(descriptionConstants);
+    rj.setDescription(descriptionConstants.WORKER_CREATED);
     return res.status(rj.status).json(rj);
   } catch(err) {
     console.log(err);

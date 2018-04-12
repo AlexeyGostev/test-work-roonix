@@ -8,6 +8,6 @@ router.post('/', workersControllers.createOne);
 
 router.put('/', workersControllers.changeOne);
 
-router.delete('/', workersControllers.deleteOne);
+router.delete('/:workerId', workersControllers.deleteOne);
 
 module.exports = router;
